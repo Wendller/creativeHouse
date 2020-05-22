@@ -35,7 +35,7 @@ p,
 
 #intro {
   width: 300px;
-  margin-right: 20px;
+  margin-right: 64px;
 }
 
 main {
@@ -64,19 +64,22 @@ button:hover {
   text-decoration: underline;
 }
 
-button.fat:hover {
+.button:hover {
   text-decoration: none;
 }
 
-.fat {
+.button {
   color: white;
   background: #ff5E84;
 
   width: 150px;
   height: 40px;
 
-  border-radius: 6px;
+  border-radius: 8px;
   box-shadow: 0px 0px 16px rgba(255, 0, 92, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {
@@ -100,17 +103,19 @@ footer a {
 
 .idea {
   display: flex;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   background-color: #fff;
+  height: 160px;
 
-  padding: 32px;
+  padding: 16px;
   border-radius: 8px;
   box-shadow: 0 4px 16px -5px rgba(1, 1, 1, 0.3);
+  font-size: 12px;
 }
 
 .idea img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   margin-right: 32px;
 }
 
@@ -119,12 +124,14 @@ footer a {
 }
 
 .idea p {
-  margin: 8px 0;
+  margin: 4px 0;
   color: #777;
+  font-size: 14px;
 }
 
 .idea .description {
-  margin: 16px 0;
+  margin: 4px 0;
+  font-size: 14px;
 }
 
 /* MODAL FORM */
@@ -133,11 +140,13 @@ footer a {
   background: #ff5E84;
   position: absolute;
   top: 0;
+  
   width: 100vw;
   height: 100vw;
 
   display: flex;
   justify-content: center;
+  transition: 300ms;
 }
 
 #modal .content {
@@ -233,4 +242,117 @@ form button:hover {
 #modal.hide {
   opacity: 0;
   visibility: hidden;
+}
+
+/* IDEIA.HTML */
+
+#page-ideas #container {
+  display: block;
+}
+
+#page-ideas header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#page-ideas nav {
+  display: flex;
+  align-items: center;
+}
+
+#page-ideas nav li {
+  list-style-type: none;
+  margin-right: 16px;
+}
+
+#page-ideas nav li a {
+  color: #24282B;
+}
+
+#page-ideas nav li:last-child {
+  margin: 0;
+
+}
+
+#page-ideas nav li:last-child a {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #ff5E84;
+}
+
+#page-ideas nav li:last-child a:hover {
+  background-color: #0984e3;
+  text-decoration: none;
+  transition: 300ms;
+}
+
+section#title {
+  text-align: center;
+  margin: 64px 0;
+}
+
+section#title p {
+  opacity: 0.7;
+  margin: 0;
+}
+
+section#title h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+section#ideas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Ideas */
+
+section#ideas .idea {
+  display: flex;
+  background-color: #fff;
+  min-height: 245px;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px -5px rgba(1, 1, 1, 0.3);
+  font-size: 14px;
+}
+
+section#ideas .idea img {
+  width: 60px;
+  height: 60px;
+  margin-right: 32px;
+}
+
+section#ideas .idea h3 {
+  margin: 0;
+}
+
+section#ideas .idea p {
+  margin: 8px 0;
+  color: #777;
+  font-size: 14px;
+}
+
+section#ideas .idea .description {
+  margin: 16px 0;
+  font-size: 14px;
+} 
+
+section#ideas .idea a {
+  margin-top: 8px;
+}
+
+section#title,
+section#ideas,
+footer {
+  margin-top: 64px;
 }
