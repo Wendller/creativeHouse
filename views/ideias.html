@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Ideias - Casa Criativa</title>
+</head>
+<body id="page-ideas">
+  <div id="container">
+    <header>
+      <a href="/">
+        <img src="logo.png" alt="imagem Casa Criativa">
+      </a>
+      
+      <nav>
+        <li><a href="/">Início</a></li>
+        <li><a href="#" onclick="onOff()">Nova ideia</a></li>
+      </nav>
+    </header>
+  
+    <section id="title">
+      <p>em exibição</p>
+      <h1>Ideias</h1>
+    </section>
+  
+    <main>
+      <section id="ideas">
+        {% for idea in ideas %}
+          <div class="idea">
+            <img src="{{idea.img}}" alt="">
+    
+            <div class="content">
+              <h3>{{idea.title}}</h3>
+              <p>{{idea.category}}</p>
+              <div class="description">
+                {{idea.description}}
+              </div>
+              <a href="{{idea.url}}" target="_blank">Visualizar ideia</a>
+            </div>
+          </div>
+        {% endfor %}
+      </section>
+    </main>
+  
+    <footer id="footer">Com 💜 <a href="http://rocketseat.com.br" target="_blank">Rocketseat</a></footer>
+  </div>
+
+  <!-- Modal -->
+  {% include "modal.html" %}
+
+  <script src="scripts.js"></script>
+</body>
+</html>
